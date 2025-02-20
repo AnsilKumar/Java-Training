@@ -1,0 +1,25 @@
+// Palindrome or not
+
+#include<stdio.h>
+int reverse(int n) {
+    int rev,a=0;
+    while(n>0) {
+        rev = n % 10;   // storing last digit
+        a = a*10 + rev;     // putting no.s together
+        n = n / 10;     // removing the last number
+    }
+    return a;
+}
+int main() {
+    
+    int n=101;
+    if(n==reverse(n))
+        printf("%d is palindrome",n);
+    else
+        printf("%d is not palindrome",n);
+    return 0;
+}
+
+
+
+
