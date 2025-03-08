@@ -82,3 +82,84 @@ public class LinkedListDemp {
 
 
 
+
+
+
+
+
+
+
+// Stack implementation using linked list ( here head side is pushing and poping side)
+
+class Node {
+    String data;
+    Node next;
+    
+    public Node(String data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class MyLinkedList {
+    Node head;
+    
+    // insertAtStart
+    public void push(String data) {
+        Node newNode = new Node(data);
+        if(head == null) {
+            head = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+    
+    // deleteAtStart
+    public void pop() {
+        if(head == null) {
+            return;
+        }
+        Node temp = head;
+        temp = temp.next;
+        head = temp;
+    }
+    
+    public void printList() {
+        System.out.println();
+        Node temp = head;
+        if(head == null) {
+            System.out.print("LinkedList is empty");
+            return;
+        }
+        while(temp.next != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.print("NULL");
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		MyLinkedList obj1 = new MyLinkedList();
+		
+		obj1.push("Ansil");
+		obj1.push("Shant");
+		obj1.push("Anita");
+		obj1.push("Vijay");
+		obj1.push("Kumar");
+				
+		obj1.printList();
+		
+        obj1.pop();
+        obj1.printList();
+		
+		
+	}
+}
+
+
+
+
