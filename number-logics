@@ -1,0 +1,20 @@
+68. Write a program to find out how many 1 and 0 in a given number.
+
+public class Main
+{
+    public static void oneAndZero(int n) {
+        int num, one=0, zero=0;
+        while(n>0) {
+            num = n % 10;
+            if(num == 0) zero++;
+            if(num == 1) one++; 
+            n = n / 10;
+        }
+        System.out.println("1's :" + one);
+        System.out.println("0's :" + zero);
+    }
+    
+	public static void main(String[] args) {
+		oneAndZero(10202);
+	}
+}
