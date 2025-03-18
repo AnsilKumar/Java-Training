@@ -43,3 +43,29 @@ public class Main
 		largestDigit(15207892);
 	}
 }
+
+
+
+
+
+
+
+
+72. // Write a program to find the smallest digit in a number..
+
+public class Main
+{
+    public static void smallestDigit(int n) {
+        int num, min=n%10;
+        while(n>0) {
+            num = n % 10;
+            min = num>min ?min : num;
+            n = n / 10;
+        }
+        System.out.println("Smallest digit is:" + min);
+    }
+    
+	public static void main(String[] args) {
+		smallestDigit(10527892);
+	}
+}
