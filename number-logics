@@ -18,3 +18,28 @@ public class Main
 		oneAndZero(10202);
 	}
 }
+
+
+
+
+
+
+
+70. Write a program to find the largest digit in a number.
+
+public class Main
+{
+    public static void largestDigit(int n) {
+        int num, max=0;
+        while(n>0) {
+            num = n % 10;
+            max = num>max ? num : max;
+            n = n / 10;
+        }
+        System.out.println("largest digit is:" + max);
+    }
+    
+	public static void main(String[] args) {
+		largestDigit(15207892);
+	}
+}
