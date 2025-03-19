@@ -69,3 +69,37 @@ public class Main
 		smallestDigit(10527892);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+66. Write a program to Calculate Reverse a number using Recursion.
+
+public class Main
+{
+    public static int addNumbers(int a, int b)
+    {
+        int carry;
+        while(b!=0) 
+        {
+            carry = (a&b) << 1;
+            a = a^b;
+            b = carry;
+        }
+        return a;
+    }
+    
+	public static void main(String[] args) 
+	{
+		System.out.println(addNumbers(9,11));
+	}
+}
